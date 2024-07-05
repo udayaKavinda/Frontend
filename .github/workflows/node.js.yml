@@ -22,7 +22,7 @@ jobs:
       with:
         path: Front
     - name: Navigate to frontend directory
-      run: cd main/Front
+      run: cd Front
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
