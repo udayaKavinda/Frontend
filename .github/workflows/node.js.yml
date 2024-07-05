@@ -16,13 +16,11 @@ jobs:
       matrix:
         node-version: [20.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-        
-    defaults:
-      run:
-        working-directory: Front
 
     steps:
     - uses: actions/checkout@v4
+    - name: Navigate to frontend directory
+      run: cd main/Front
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
